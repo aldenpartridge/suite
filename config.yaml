@@ -1,0 +1,35 @@
+# Cybersecurity Tool Suite Configuration
+
+# General settings
+general:
+  debug: false
+  export_dir: "~/.cybersuite/results"
+
+# Port Scanner settings
+portscan:
+  timeout: 2000  # milliseconds
+  concurrent: 100
+  default_start_port: 1
+  default_end_port: 1024
+
+# Subdomain Enumerator settings
+subdomain:
+  wordlist: "~/.cybersuite/wordlists/subdomains.txt"
+  concurrent: 50
+  timeout: 5000  # milliseconds
+
+# Hash Cracker settings
+hashcrack:
+  wordlist: "~/.cybersuite/wordlists/passwords.txt"
+  concurrent: 8
+
+# Network Mapper settings
+netmap:
+  timeout: 5000  # milliseconds
+  concurrent: 50
+
+# HTTP Header Scanner settings
+headers:
+  timeout: 5000  # milliseconds
+  concurrent: 10
+  check_ssl: true 
